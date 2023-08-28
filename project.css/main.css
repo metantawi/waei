@@ -1,0 +1,191 @@
+:root {
+  --main-color:#f6c916;
+  --main-sec-color:#272727;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: white;
+  text-decoration: none;
+  border: none;
+}
+body.dark {
+  background-color: #272727;
+  --main-color:#f6c916;
+  --main-sec-color:white;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.container { 
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+/* smaill Scerrns */
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium Screens  */
+@media (min-width : 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large Screens */
+@media (min-width : 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Golabl Rules */
+
+.toggle {
+  color: var(--main-sec-color);
+    display: none;
+    font-size: 28px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+}
+@media (max-width:991px) {
+  .toggle {
+    display: block;
+  }
+  .links {
+    transition: 0.3s;
+    background-color: var(--main-color);
+    position: fixed;
+    width: 77%;
+    height: 100%;
+    transform: translateX(-200%);
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 10000000;
+  }
+    .links.open {
+    transform: translateX(0);
+}
+  .send {
+    display: none;
+  }
+  .navbar .dark {
+    transition: 0.3s;
+    transform: translateX(-200%);
+    position: fixed;
+    z-index: 100000000000;
+    bottom: 36px;
+    left: 36px;
+  }
+  .navbar .dark.open{
+    transform: translateX(0%);
+  }
+  .send.open {
+    display: block;
+}
+  .links.open li {
+    padding: 25px 48px;
+    border-bottom: 1px solid white;
+  }
+  .links.open li a:hover {
+    color: white;
+  }
+  .navbar img {
+    display: none;
+  }
+}
+.navbar img {
+  width: 15%;
+}
+.navbar nav li {
+    padding: 44px;
+}
+.navbar nav li a {
+    color: var(--main-sec-color);
+    font-size: 19px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.navbar nav li a:hover {
+  color: var(--main-color);
+}
+.navbar button,
+.date button {
+      background-color: var(--main-color);
+    padding: 20px 40px;
+    border: none;
+    border-radius: 13px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.navbar button a,
+.date button a {
+    font-weight: 600;
+    color: white;
+    font-size: 19px;
+}
+.navbar button:hover,
+.date button:hover {
+  background-color: var(--main-sec-color);
+}
+@media (max-width:991px) {
+  .navbar button,
+  .date button {
+  width: 100%;
+  margin-bottom: 20px;
+}
+}
+.navbar .dark {
+    font-size: 25px;
+    background-color: var(--main-sec-color);
+    padding: 13px;
+    border-radius: 42px;
+    color: var(--main-color);
+    margin-right: 20px;
+    cursor: pointer;
+}
+.landing img {
+  width: 37%;
+  border-radius: 20px;
+}
+@media (max-width:991px) {
+  .landing img {
+    width: 100%;
+  }
+}
+.landing .date h2 {
+    color: var(--main-sec-color);
+    font-size: 58px;
+    max-width: 583px;
+}
+.landing .date p {
+    color: var(--main-sec-color);
+    max-width: 500px;
+    margin: 35px 0;
+    line-height: 1.5;
+    font-weight: 500;
+}
+.landing .date button:last-child {
+  border: 2px solid var(--main-sec-color);
+  background-color: transparent;
+}
+.landing .date button:last-child:hover {
+  border: 2px solid transparent;
+  background-color: var(--main-color);
+}
+.landing .date .button-tow a {
+  color: var(--main-sec-color);
+}
+.landing .date .button-tow:hover a {
+  color: white;
+}
